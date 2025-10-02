@@ -32,4 +32,9 @@
   .container-max {
     @apply max-w-7xl mx-auto;
   }
+
+  /* Ensure in-page anchors account for fixed header height */
+  .scroll-offset {
+    scroll-margin-top: 80px;
+  }
 }

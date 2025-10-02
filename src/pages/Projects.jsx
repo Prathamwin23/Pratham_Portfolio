@@ -16,7 +16,7 @@ const Projects = () => {
     : projectsData.filter(project => project.tags.includes(selectedFilter));
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="scroll-offset section-padding">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

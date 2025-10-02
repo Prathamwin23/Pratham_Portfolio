@@ -37,7 +37,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-dark-800">
+    <section id="about" className="scroll-offset section-padding bg-gray-50 dark:bg-dark-800">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
