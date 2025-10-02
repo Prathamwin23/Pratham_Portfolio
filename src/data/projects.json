@@ -1,0 +1,44 @@
+[
+  {
+    "title": "DevOps Banking Application – CI/CD & Cloud Deployment",
+    "description": "Built a full CI/CD pipeline using Jenkins, SonarQube, Trivy, and Nexus. Provisioned AWS EKS with Terraform and deployed Spring Boot microservices on Kubernetes with monitoring and autoscaling.",
+    "techStack": ["AWS", "Terraform", "Kubernetes", "Docker", "Jenkins", "SonarQube", "Trivy", "Nexus", "MySQL", "GitOps"],
+    "image": "/images/Banking_app_Deployment.jpg",
+    "github": "https://github.com/Prathamwin23/Multi-Tier-Java-main",
+    "demo": "",
+    "type": "DevOps",
+    "mediumLink": "https://medium.com/@prathamp2301/devops-banking-application-cicd-cloud-deployment",
+    "tags": ["DevOps", "Cloud"]
+  },
+  {
+    "title": "CI/CD Pipeline with Jenkins, Kubernetes & Ansible",
+    "description": "Implemented Jenkins-based CI/CD for containerized applications on AWS EKS with Docker Hub integration. Automated Kubernetes deployments using Ansible with secure credential management.",
+    "techStack": ["AWS", "Jenkins", "Docker", "Kubernetes", "Ansible", "GitHub"],
+    "image": "/images/DevOps_project.jpg",
+    "github": "https://github.com/Prathamwin23/Java_app",
+    "demo": "",
+    "type": "DevOps",
+    "mediumLink": "https://medium.com/@prathamp2301/cicd-pipeline-jenkins-kubernetes-ansible",
+    "tags": ["DevOps", "Automation"]
+  },
+  {
+    "title": "Azure DevOps: Next.js Application CI/CD Pipeline",
+    "description": "Deployed a Next.js full-stack app with GitHub Actions CI/CD on Azure App Service. Configured environment variables, optimized production, and implemented monitoring.",
+    "techStack": ["Azure", "GitHub Actions", "Next.js", "Node.js", "Docker", "MongoDB Atlas"],
+    "image": "/images/next_js_app.png",
+    "github": "https://github.com/Prathamwin23/azure-nextjs-demo-",
+    "demo": "https://drive.google.com/file/d/1wpitaGnSuFcsTbXZVvI2nXDFZMIbbiWQ/view?usp=sharing",
+    "type": "WebApp",
+    "tags": ["Cloud", "Fullstack", "DevOps"]
+  },
+  {
+    "title": "Team Tracking App",
+    "description": "Real-time Django + React app with Redis and WebSockets to assign field visits based on location. Managers can track, reassign, and monitor live team activity.",
+    "techStack": ["Django", "PostgreSQL", "Django Channels", "Redis", "React", "Bootstrap"],
+    "image": "/images/Team Tracking App.jpeg",
+    "github": "https://github.com/Prathamwin23/my_race_formula1",
+    "demo": "https://team-tracking-app.herokuapp.com",
+    "type": "WebApp",
+    "tags": ["Fullstack", "Realtime"]
+  }
+]

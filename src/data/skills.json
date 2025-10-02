@@ -1,0 +1,41 @@
+{
+  "Programming": [
+    {"name": "Python", "level": "Intermediate"},
+    {"name": "C/C++", "level": "Intermediate"},
+    {"name": "Java", "level": "Beginner"},
+    {"name": "JavaScript", "level": "Intermediate"},
+    {"name": "HTML/CSS", "level": "Intermediate"}
+  ],
+  "DevOps Tools": [
+    {"name": "Git", "level": "Intermediate"},
+    {"name": "Jenkins", "level": "Intermediate"},
+    {"name": "GitHub Actions", "level": "Intermediate"},
+    {"name": "ArgoCD", "level": "Beginner"},
+    {"name": "Ansible", "level": "Beginner"},
+    {"name": "Terraform", "level": "Intermediate"},
+    {"name": "Docker", "level": "Advanced"},
+    {"name": "Kubernetes", "level": "Intermediate"},
+    {"name": "Nexus", "level": "Intermediate"},
+    {"name": "SonarQube", "level": "Intermediate"},
+    {"name": "Trivy", "level": "Intermediate"}
+  ],
+  "Cloud": [
+    {"name": "AWS", "level": "Intermediate"},
+    {"name": "Azure App Services", "level": "Beginner"}
+  ],
+  "Monitoring & Visualization": [
+    {"name": "Prometheus", "level": "Intermediate"},
+    {"name": "Grafana", "level": "Intermediate"},
+    {"name": "Matplotlib", "level": "Intermediate"}
+  ],
+  "Databases": [
+    {"name": "MySQL", "level": "Intermediate"},
+    {"name": "PostgreSQL", "level": "Intermediate"},
+    {"name": "MongoDB Atlas", "level": "Beginner"}
+  ],
+  "Frameworks": [
+    {"name": "Django", "level": "Intermediate"},
+    {"name": "React", "level": "Beginner"},
+    {"name": "Next.js", "level": "Beginner"}
+  ]
+}
