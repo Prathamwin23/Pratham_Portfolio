@@ -26,14 +26,26 @@ const Header = () => {
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
-    if (element) {
+    if (!element) {
+      setIsMenuOpen(false);
+      return;
+    }
+    // Close the mobile menu first so header height is correct
+    const wasMenuOpen = isMenuOpen;
+    setIsMenuOpen(false);
+    const doScroll = () => {
       const headerEl = document.querySelector('header');
       const headerHeight = headerEl ? headerEl.offsetHeight : 0;
       const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
       const targetY = Math.max(elementTop - headerHeight - 8, 0);
       window.scrollTo({ top: targetY, behavior: 'smooth' });
+    };
+    if (wasMenuOpen) {
+      // Wait for layout to settle after menu closes
+      requestAnimationFrame(() => requestAnimationFrame(doScroll));
+    } else {
+      doScroll();
     }
-    setIsMenuOpen(false);
   };
 
   return (
