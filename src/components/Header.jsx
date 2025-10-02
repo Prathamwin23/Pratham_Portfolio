@@ -24,29 +24,8 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (!element) {
-      setIsMenuOpen(false);
-      return;
-    }
-    // Close the mobile menu first so header height is correct
-    const wasMenuOpen = isMenuOpen;
-    setIsMenuOpen(false);
-    const doScroll = () => {
-      const headerEl = document.querySelector('header');
-      const headerHeight = headerEl ? headerEl.offsetHeight : 0;
-      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-      const targetY = Math.max(elementTop - headerHeight - 8, 0);
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
-    };
-    if (wasMenuOpen) {
-      // Wait for layout to settle after menu closes
-      requestAnimationFrame(() => requestAnimationFrame(doScroll));
-    } else {
-      doScroll();
-    }
-  };
+  // Use native anchor scrolling; just close the mobile menu on click
+  const handleNavClick = () => setIsMenuOpen(false);
 
   return (
     <motion.header
@@ -71,15 +50,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.button
+              <motion.a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
               >
                 {item.name}
-              </motion.button>
+              </motion.a>
             ))}
           </div>
 
@@ -116,15 +95,16 @@ const Header = () => {
         >
           <div className="px-4 py-2 space-y-2">
             {navItems.map((item) => (
-              <motion.button
+              <motion.a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={handleNavClick}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-dark-700 rounded-lg transition-colors duration-200"
               >
                 {item.name}
-              </motion.button>
+              </motion.a>
             ))}
           </div>
         </motion.div>
