@@ -27,7 +27,11 @@ const Header = () => {
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerEl = document.querySelector('header');
+      const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const targetY = Math.max(elementTop - headerHeight - 8, 0);
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
